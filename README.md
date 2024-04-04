@@ -258,7 +258,7 @@ Foi criado a tela de home, login e cadastro.
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 404 bad request 
 
-## Comprar
+## Comprar de Ativos
 
 - **URL**: `/api/financial-movement/purchase`
 - **Método**: `POST`
