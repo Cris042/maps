@@ -15,7 +15,7 @@ Este documento oferece uma visão abrangente dos pontos finais e funcionalidades
 
 Optamos por utilizar o H2 devido à sua natureza de base de dados em memória, o que dispensa a necessidade de um servidor dedicado. Essa escolha facilita a execução de testes durante o desenvolvimento.
 
-- Duas instâncias do H2 foram empregadas: uma para o ambiente de desenvolvimento e outra para o ambiente de testes.
+- Duas instâncias do H2 foram empregadas: uma para o ambiente de desenvolvimento, que sera armazenada em formato de arquivo, e outra para o ambiente de testes que sera in-memory.
 - Um script foi elaborado para popular a tabela de usuário, sendo executado automaticamente ao iniciar a aplicação.
 
 ## Flyway
@@ -32,16 +32,16 @@ Os testes unitários foram implementados com JUnit e Mockito. Ultizamos TDD para
 ## Autorização
 
 Para autorização de acesso aos endpoints, foi adotado o JWT (JSON Web Token) em formato de cookie, para facilitar a testagem.
-Além disso, foram definidos dois tipos de roles: usuário normal e administrador.
+Além disso, foram definidos dois tipos de roles: user adm.
 
 ## Atores 
 
-## ADMIN
+# ADMIN
 
 - Cadastrar, atualizar, excluir e listar ativos financeiros.
 - Visualizar detalhes de uma posição de um ativo.
 
-## USER
+# USER
 
 - Verificar saldo
 - Cadastrar e listar transações financeiras.
@@ -54,21 +54,21 @@ Além disso, foram definidos dois tipos de roles: usuário normal e administrado
 
 ## Ativos Financeiros
 
-Foram Regristados ativos de : ATIVO0 ate ATIVO127, com dateIssue de 02/01/2010 e dateTerminus 31/03/2025 .
+Foram Regristados ativos de : ATIVO0 ate ATIVO127, com data de inicio de 02/01/2010 e data de finalização 31/03/2025 .
 
 ## Thread-safe.
 
 A aplicação foi desenvolvida de forma multithread.
-Para buscar posição de um ativo, foi utilizado um pool de threads para executar tarefas assíncronas, mantendo um mapa de resultados de processamento e fornecendo métodos para iniciar e recuperar resultados de tarefas assíncronas.
-Os desempenhos que obtive usando 10 threads foram de 762 ms para processar a posição e 24.8 ms para buscar pelo registro.
 
-## Outros
-
-O arquivo req.json contém exemplos de requisições para os endpoints da API.
+- Para buscar posição de um ativo, foi utilizado um pool de threads para executar tarefas assíncronas, mantendo um mapa de resultados de processamento e fornecendo métodos para iniciar e recuperar resultados de tarefas assíncronas.O desempenhos que obtive usando 10 threads foram de 762 ms para  o processo de mapeamento e processamento da posiçao do ativo , e em seguinda obtivemos o tempo de 24.8 ms para buscar pelo registro.
 
 ## Front End
 
 Foi criado a tela de home, login e cadastro.
+
+## Outros
+
+O arquivo api/req.json contém exemplos de requisições para os endpoints da API
 
 # Endpoints
 
