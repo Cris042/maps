@@ -4,13 +4,12 @@ Este documento oferece uma visão abrangente dos pontos finais e funcionalidades
 
 ## Tecnologias Utilizadas
 
-# Java 8 
-# Spring Boot 2.7
-# Maven
-# H2 Database
-# Flyway
-# Angular
-
+- Java 8 
+- Spring Boot 2.7
+- Maven
+- H2 Database
+- Flyway
+- Angular
 
 ## H2
 
@@ -71,7 +70,7 @@ O arquivo req.json contém exemplos de requisições para os endpoints da API.
 
 Foi criado a tela de home, login e cadastro.
 
-## Endpoints
+# Endpoints
 
 ## Autenticar Usuário
 
@@ -79,10 +78,10 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Autentica um usuário e gera um cokie JWT.
 - **Parâmetros**:
-  {
-    "username" : "root"
-    "password" : "spiderman",
-  }
+
+      "username" : "root"
+      "password" : "spiderman",
+  
 - **Resposta**:
     - Sucesso: 200 OK com o cokie JWT.
     - Falha: 400 Bad Request com uma mensagem de erro se as credenciais forem inválidas.
@@ -93,10 +92,11 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Registra um novo usuário no sistema.
 - **Parâmetros**:
-  {
-  "username" : "",
-  "password" : "",
-  }
+  
+  
+      "username" : "",
+      "password" : "",
+  
 - **Resposta**:
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 400 Bad Request com uma mensagem de erro se o nome de usuário já estiver em uso.
@@ -115,12 +115,12 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Cria um ativo financeiro.
 - **Parâmetros**:
-    {
-     "name" : "",
-     "typeFinancialAssets" : "",
-     "dateIssue" : "",
-     "dateTerminus" : ""
-    }
+    
+       "name" : "",
+       "typeFinancialAssets" : "",
+       "dateIssue" : "",
+       "dateTerminus" : ""
+    
 - **Resposta**:
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 400 Bad Request com uma mensagem de erro se o nome do ativo financeiro.
@@ -209,14 +209,14 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Venda .
 - **Parâmetros**:
-  {
-      "description": "",
-      "valueRelease" : 0.0,
-      "dateMovement" : "yyyy-MM-dd",
-      "account" : {
-      "id" : 1
-      }
-  }
+  
+        "description": "",
+        "valueRelease" : 0.0,
+        "dateMovement" : "yyyy-MM-dd",
+        "account" : {
+        "id" : 1
+        }
+  
 - **Resposta**:
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 404 bad request
@@ -227,14 +227,14 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Compra .
 - **Parâmetros**:
-  {
-      "description": "",
-      "valueRelease" : 0.0,
-      "dateMovement" : "yyyy-MM-dd",
-      "account" : {
-        "id" : 1
-       }
-  }
+  
+        "description": "",
+        "valueRelease" : 0.0,
+        "dateMovement" : "yyyy-MM-dd",
+        "account" : {
+          "id" : 1
+         }
+  
 - **Resposta**:
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 404 bad request
@@ -245,15 +245,15 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Venda de ativos .
 - **Parâmetros**:
-  {
-      "amount": 10.0,
-      "valueOverall" : 20.0,
-      "nameFinancialActive" : "ATIVO100",
-      "dateMovement" : "2020-10-10",
-      "account" : {
-          "id" : 1
-       }
-  }
+  
+        "amount": 10.0,
+        "valueOverall" : 20.0,
+        "nameFinancialActive" : "ATIVO100",
+        "dateMovement" : "2020-10-10",
+        "account" : {
+            "id" : 1
+         }
+  
 - **Resposta**:
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 404 bad request 
@@ -264,14 +264,14 @@ Foi criado a tela de home, login e cadastro.
 - **Método**: `POST`
 - **Descrição**: Compra de ativos.
 - **Parâmetros**:
-  {
-      "description": "",
-      "valueRelease" : 0.0,
-      "dateMovement" : "yyyy-MM-dd",
-      "account" : {
-        "id" : 1
-      }
-  }
+  
+        "description": "",
+        "valueRelease" : 0.0,
+        "dateMovement" : "yyyy-MM-dd",
+        "account" : {
+          "id" : 1
+        }
+  
 - **Resposta**:
     - Sucesso: 200 OK com uma mensagem de confirmação.
     - Falha: 404 bad request 
