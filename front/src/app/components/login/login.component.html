@@ -1,0 +1,50 @@
+<div class="page page-center">
+  <div class="container container-normal py-4">
+    <div class="row align-items-center g-4">
+      <div class="col-lg">
+        <div class="container-tight">
+          <div class="text-center mb-4">
+            <a routerLink="/" class="navbar-brand navbar-brand-autodark">
+              <img src="../assets/img/maps-logo-positivo.png" height="40" alt="MAPS">
+            </a>
+          </div>
+          <div class="card card-md">
+            <div class="card-body">
+              <h2 class="h2 text-center mb-4">Faça login em sua conta</h2>
+              <form action="./" method="get" autocomplete="off" novalidate>
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" placeholder="Seu Nome"
+                    autocomplete="off" [(ngModel)]="username" name="username">
+                </div>
+                <div class="mb-2">
+                  <label class="form-label">
+                    Senha
+                  </label>
+                  <div class="input-group input-group-flat">
+                    <input type="password" class="form-control" placeholder="Sua senha"
+                      autocomplete="off" [(ngModel)]="password" name="password">
+                  </div>
+                </div>
+                <div class="form-footer">
+                  <button type="submit" style="background: #4292F5; border-color: #4694f5; color: #fff !important;"
+                    class="btn btn-primary w-100" (click)="onSubmit()">Entrar</button>
+                </div>
+              </form>
+            </div>
+            <div class="hr-text">maps</div>
+            <div class="card-body">
+              
+            </div>
+          </div>
+          <div class="text-center text-muted mt-3">
+            Ainda não tem conta? <a routerLink="/cadastro" tabindex="-1">Cadastre-se aqui</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg d-none d-lg-block">
+        <img src="../assets/img/bg.svg" height="300" class="d-block mx-auto" alt="">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+INSERT INTO tb_role (name) VALUES ('ROLE_ADM'),('ROLE_USER');
