@@ -1,6 +1,6 @@
-# Documentação da API
+# Documentação
 
-Este documento oferece uma visão abrangente dos pontos finais e funcionalidades da API REST para um sistema de gerenciamento de finanças pessoais.
+Este documento oferece uma visão abrangente dos pontos finais e funcionalidades para um sistema de gerenciamento de finanças pessoais.
 
 ## Tecnologias Utilizadas
 
@@ -9,7 +9,7 @@ Este documento oferece uma visão abrangente dos pontos finais e funcionalidades
 - Maven
 - H2 Database
 - Flyway
-- Angular
+- Angular 15
 
 ## H2
 
