@@ -36,18 +36,18 @@ Além disso, foram definidos dois tipos de roles: user adm.
 
 ## Atores 
 
-# ADMIN
+### ADMIN
 
 - Cadastrar, atualizar, excluir e listar ativos financeiros.
 - Visualizar detalhes de uma posição de um ativo.
 
-# USER
+### USER
 
 - Verificar saldo
 - Cadastrar e listar transações financeiras.
 - Visualizar detalhes de uma posição de um ativo.
 
-# Acessos 
+### Acessos 
 
 - ROLE USER( "usuario0", "senha0")
 - ROLE ADMIN( "root", "spiderman")
